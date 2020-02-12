@@ -1,0 +1,25 @@
+.linkSec {
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    /* border: 1px;
+    border-color: blue;
+    border-style: solid; */
+    margin: 0 auto;
+    position: relative;
+}
+
+.link {
+    width: 100px;
+    height: auto;
+    text-align: center;
+    display: inline-block;
+
+    /* border-width: 1px;
+    border-color: red;
+    border-style: solid; */
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}

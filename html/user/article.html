@@ -6,11 +6,18 @@
     <meta charset="UTF-8">
 </head>
 
-    {{template "public/head" .}}
+{{template "public/head" .}}
+<div>
+    {{range .articles}}
     <div>
-        kksk
+        <a href="#"> <span> title: {{.Title}}</span> </a><br>
+        <span> title: {{.Abstract}}</span><br>
+        <span> cateroty: {{.Category}}</span><br>
+        <div style="height:5px;width: 50%;background-color: rgba(0,0,0,0.5);"></div>
     </div>
-    {{template "public/foot" .}}
+    {{end}}
+</div>
+{{template "public/foot" .}}
 
 </html>
 {{end}}

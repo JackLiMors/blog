@@ -1,0 +1,45 @@
+.banner {
+    background: url("../pic/04.png");
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;    
+    height: 200px;
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+}
+
+.functionSec {
+    width: 360px;
+    height: auto;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(125, 125, 125, 0.5);
+    z-index: 1;
+    /* border: 1px;
+    border-color: blue;
+    border-style: solid; */
+}
+
+a {
+    text-decoration: none;
+}
+
+.functionCell {
+    width: 60px;
+    height: 20px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 5%;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+    cursor: pointer;
+
+    /* border-width: 1px;
+    border-color: red;
+    border-style: solid; */
+
+}
