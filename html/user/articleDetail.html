@@ -1,0 +1,26 @@
+{{ define "user/articleDetail.html" }}
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> index </title>
+</head>
+
+<link href="../../static/css/articleDetail.css" rel="stylesheet">
+{{template "public/head.html" .}}
+
+<div id="title">
+    <span>{{.articleDetail.Title}}</span>
+</div>
+
+<div>
+    <span>create time: {{.articleDetail.CreateTime}},category:{{.articleDetail.CategoryId}}</span>
+</div>
+
+<div id="content">
+    <span>{{.articleDetail.Content}}</span>
+</div>
+
+{{template "public/foot.html" .}}
+{{end}}

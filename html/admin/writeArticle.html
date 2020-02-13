@@ -1,0 +1,86 @@
+{{define "admin/writeArticle.html"}}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>wangEditor demo</title>
+</head>
+{{template "public/head.html"}}
+
+<link rel="stylesheet" href="../../static/editor.md/css/editormd.css" />
+<script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+<script src="../../static/editor.md/editormd.min.js"></script>
+<div style="font-size: 35px;margin-left:20%;height:35px;display: inline-block;">
+    <span>Title:</span>
+</div>
+<div style="text-align:center;display: inline-block;width: 50%;margin-top:3%;margin-left: 5%;margin-bottom: 3%;">
+    <input type="text" height=65px style="width:100%;text-align:center;font-size:25px;border-width: 0; 
+        border-bottom-width:3px;"></input>
+</div>
+
+<div id="layout" class="editor">
+    <div id="test-editormd">
+        <textarea></textarea>
+    </div>
+</div>
+<script type="text/javascript">
+    var testEditor;
+    testEditor = editormd("test-editormd", {
+        placeholder: '本编辑器支持Markdown编辑，左边编写，右边预览',  //默认显示的文字，这里就不解释了
+        width: "80%",
+        height: 640,
+        syncScrolling: "single",
+        path: "../../static/editor.md/lib/",   //你的path路径（原资源文件中lib包在我们项目中所放的位置）
+        theme: "light",//工具栏主题
+        previewTheme: "light",//预览主题
+        editorTheme: "light",//编辑主题
+        saveHTMLToTextarea: true,
+        emoji: false,
+        taskList: true,
+        tocm: true,         // Using [TOCM]
+        tex: true,                   // 开启科学公式TeX语言支持，默认关闭
+        flowChart: true,             // 开启流程图支持，默认关闭
+        sequenceDiagram: true,       // 开启时序/序列图支持，默认关闭,
+        toolbarIcons: function () {  //自定义工具栏，后面有详细介绍
+            return editormd.toolbarModes['simple']; // full, simple, mini
+        },
+    });
+    testEditor.getMarkdown();
+</script>
+<div style="margin:0 auto;margin-top:3%;text-align: center;">
+    <button style="width: 150px; height:58px;">submit</button>
+</div>
+<!-- 换成markdown的文本编辑器-->
+<!-- <button id="btn1">获取html</button>
+<button id="btn2">获取text</button> -->
+<!-- 
+<div id="div1" class="toolbar" style="width:80%;margin: 0 auto;text-align: center;">
+</div>
+<div id="div2" class="text" style="min-height: 300px;width:80%;margin: 0 auto;">
+</div>
+<div id="editor" style="margin-top:3%" >
+</div>
+<script type="text/javascript" src="../../static/wangEditor/release/wangEditor.js"></script>
+<script type="text/javascript">
+    var E = window.wangEditor
+    var editor = new E('#div1', '#div2')
+    // 或者 var editor = new E( document.getElementById('editor') )
+    editor.create()
+    document.getElementById('btn1').addEventListener('click', function () {
+        // 读取 html
+        alert(editor.txt.html())
+    }, false)
+
+    document.getElementById('btn2').addEventListener('click', function () {
+        // 读取 text
+        alert(editor.txt.text())
+    }, false)
+
+        // editor.$textElem.attr('contenteditable', false)
+</script> -->
+
+{{template "public/foot.html"}}
+
+</html>
+{{end}}

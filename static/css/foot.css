@@ -6,6 +6,7 @@
     border-color: blue;
     border-style: solid; */
     margin: 0 auto;
+    margin-top: 3%;
     position: relative;
 }
 
@@ -14,7 +15,6 @@
     height: auto;
     text-align: center;
     display: inline-block;
-
     /* border-width: 1px;
     border-color: red;
     border-style: solid; */
