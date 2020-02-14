@@ -20,5 +20,6 @@ func main() {
 	r.GET("/article", controller.ArticleHandler)
 	r.GET("/article/detail", controller.ArticleDetailHandler)
 	r.GET("/writeArticle", controller.WriteArticleHandler)
+	r.POST("/writeArticle/uploadArticle",controller.UploadArticleHandler)
 	r.Run(":8000")
 }

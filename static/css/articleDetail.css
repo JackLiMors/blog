@@ -1,9 +1,8 @@
 #title{
     border-width: 1px;
-    border-radius: 15%;
     border-style: solid;
     border-color: #00000030;
-    font-size: 25px;;
+    font-size: 45px;;
     text-align: center;
     height: auto;
     width: auto;
@@ -12,10 +11,13 @@
 }
 
 #content{
-    background-color:#00000060;
-    border-width: 1px;
-    border-radius: 15%;
-    border-style: solid;
-    border-color: #00000030;
-    font-size: 15px;
+    width:50%;
+    word-wrap:break-word;
+    margin: 0 auto;
+    margin-top:3%;
+}
+
+img{
+    height:108px;
+    width:192px;
 }
